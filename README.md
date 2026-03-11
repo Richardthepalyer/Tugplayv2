@@ -56,7 +56,7 @@ Main Branch
 
 Your website will appear at:
 
-https://Richardthepalyer.github.io/tugplay
+https://richardthepalyer.github.io/Tugplayv2/
 
 ---
 
