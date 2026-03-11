@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tugplay</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1 id="logo">Tugplay</h1>
+
+<div class="top-controls">
+<div id="balance">Balance: $0</div>
+<button id="dailyBtn">Daily Reward</button>
+<button id="adminBtn">Admin</button>
+</div>
+</header>
+
+<nav class="game-nav">
+<button onclick="showGame('coin')">Head or Tails</button>
+<button onclick="showGame('slots')">Slots</button>
+<button onclick="showGame('mines')">Mines</button>
+</nav>
+
+<main>
+
+<!-- Coin Flip -->
+<section id="coin" class="game">
+<h2>Head or Tails</h2>
+
+<input id="coinBet" type="number" placeholder="Bet Amount">
+
+<div id="coinDisplay">?</div>
+
+<div class="coinButtons">
+<button onclick="flipCoin('heads')">Heads</button>
+<button onclick="flipCoin('tails')">Tails</button>
+</div>
+
+<p id="coinResult"></p>
+</section>
+
+<!-- Slots -->
+<section id="slots" class="game hidden">
+<h2>Slots</h2>
+
+<input id="slotBet" type="number" placeholder="Bet Amount">
+
+<div class="reels">
+<div class="reel" id="r1">?</div>
+<div class="reel" id="r2">?</div>
+<div class="reel" id="r3">?</div>
+</div>
+
+<button onclick="spinSlots()">Spin</button>
+
+<p id="slotResult"></p>
+</section>
+
+<!-- Mines -->
+<section id="mines" class="game hidden">
+<h2>Mines</h2>
+
+<input id="mineBet" type="number" placeholder="Bet Amount">
+<button onclick="startMines()">Start Game</button>
+
+<div id="mineGrid"></div>
+
+<button id="cashoutBtn" onclick="cashOut()">Cash Out</button>
+
+<p id="mineResult"></p>
+</section>
+
+</main>
+
+<!-- Admin Panel -->
+<div id="adminPanel" class="hidden">
+<div class="adminBox">
+<h3>Admin Panel</h3>
+
+<input id="adminAmount" type="number" placeholder="Amount">
+
+<button onclick="addMoney()">Add Money</button>
+<button onclick="setMoney()">Set Money</button>
+<button onclick="removeMoney()">Remove Money</button>
+<button onclick="closeAdmin()">Close</button>
+
+</div>
+</div>
+
+<!-- Daily Reward Popup -->
+<div id="dailyPopup" class="hidden">
+<div class="dailyBox">
+<h3>Daily Reward</h3>
+<p id="dailyInfo"></p>
+<button onclick="claimDaily()">Claim</button>
+<button onclick="closeDaily()">Close</button>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
